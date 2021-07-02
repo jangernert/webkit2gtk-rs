@@ -8,6 +8,15 @@ use crate::CookieManager;
 #[cfg(any(feature = "v2_30", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 use crate::ITPThirdParty;
+#[cfg(any(feature = "v2_32", feature = "dox"))]
+#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+use crate::NetworkProxyMode;
+#[cfg(any(feature = "v2_32", feature = "dox"))]
+#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+use crate::NetworkProxySettings;
+#[cfg(any(feature = "v2_32", feature = "dox"))]
+#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+use crate::TLSErrorsPolicy;
 #[cfg(any(feature = "v2_16", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use crate::WebsiteData;
@@ -361,6 +370,12 @@ pub trait WebsiteDataManagerExt: 'static {
     #[doc(alias = "get_service_worker_registrations_directory")]
     fn service_worker_registrations_directory(&self) -> Option<glib::GString>;
 
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    #[doc(alias = "webkit_website_data_manager_get_tls_errors_policy")]
+    #[doc(alias = "get_tls_errors_policy")]
+    fn tls_errors_policy(&self) -> TLSErrorsPolicy;
+
     #[cfg_attr(feature = "v2_24", deprecated = "Since 2.24")]
     #[doc(alias = "webkit_website_data_manager_get_websql_directory")]
     #[doc(alias = "get_websql_directory")]
@@ -376,10 +391,20 @@ pub trait WebsiteDataManagerExt: 'static {
     #[doc(alias = "webkit_website_data_manager_set_itp_enabled")]
     fn set_itp_enabled(&self, enabled: bool);
 
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    #[doc(alias = "webkit_website_data_manager_set_network_proxy_settings")]
+    fn set_network_proxy_settings(&self, proxy_mode: NetworkProxyMode, proxy_settings: Option<&mut NetworkProxySettings>);
+
     #[cfg(any(feature = "v2_30", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     #[doc(alias = "webkit_website_data_manager_set_persistent_credential_storage_enabled")]
     fn set_persistent_credential_storage_enabled(&self, enabled: bool);
+
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    #[doc(alias = "webkit_website_data_manager_set_tls_errors_policy")]
+    fn set_tls_errors_policy(&self, policy: TLSErrorsPolicy);
 }
 
 impl<O: IsA<WebsiteDataManager>> WebsiteDataManagerExt for O {
@@ -574,6 +599,14 @@ impl<O: IsA<WebsiteDataManager>> WebsiteDataManagerExt for O {
         }
     }
 
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    fn tls_errors_policy(&self) -> TLSErrorsPolicy {
+        unsafe {
+            from_glib(ffi::webkit_website_data_manager_get_tls_errors_policy(self.as_ref().to_glib_none().0))
+        }
+    }
+
     fn websql_directory(&self) -> Option<glib::GString> {
         unsafe {
             from_glib_none(ffi::webkit_website_data_manager_get_websql_directory(self.as_ref().to_glib_none().0))
@@ -596,11 +629,27 @@ impl<O: IsA<WebsiteDataManager>> WebsiteDataManagerExt for O {
         }
     }
 
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    fn set_network_proxy_settings(&self, proxy_mode: NetworkProxyMode, proxy_settings: Option<&mut NetworkProxySettings>) {
+        unsafe {
+            ffi::webkit_website_data_manager_set_network_proxy_settings(self.as_ref().to_glib_none().0, proxy_mode.into_glib(), proxy_settings.to_glib_none_mut().0);
+        }
+    }
+
     #[cfg(any(feature = "v2_30", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     fn set_persistent_credential_storage_enabled(&self, enabled: bool) {
         unsafe {
             ffi::webkit_website_data_manager_set_persistent_credential_storage_enabled(self.as_ref().to_glib_none().0, enabled.into_glib());
+        }
+    }
+
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    fn set_tls_errors_policy(&self, policy: TLSErrorsPolicy) {
+        unsafe {
+            ffi::webkit_website_data_manager_set_tls_errors_policy(self.as_ref().to_glib_none().0, policy.into_glib());
         }
     }
 }

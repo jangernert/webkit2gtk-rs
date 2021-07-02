@@ -18,12 +18,6 @@ glib::wrapper! {
 }
 
 impl ContextMenuItem {
-    //#[cfg_attr(feature = "v2_18", deprecated = "Since 2.18")]
-    //#[doc(alias = "webkit_context_menu_item_new")]
-    //pub fn new(action: /*Ignored*/&gtk::Action) -> ContextMenuItem {
-    //    unsafe { TODO: call ffi:webkit_context_menu_item_new() }
-    //}
-
     #[cfg(any(feature = "v2_18", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_18")))]
     #[doc(alias = "webkit_context_menu_item_new_from_gaction")]
@@ -74,11 +68,6 @@ impl ContextMenuItem {
 pub const NONE_CONTEXT_MENU_ITEM: Option<&ContextMenuItem> = None;
 
 pub trait ContextMenuItemExt: 'static {
-    //#[cfg_attr(feature = "v2_18", deprecated = "Since 2.18")]
-    //#[doc(alias = "webkit_context_menu_item_get_action")]
-    //#[doc(alias = "get_action")]
-    //fn action(&self) -> /*Ignored*/Option<gtk::Action>;
-
     #[cfg(any(feature = "v2_18", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_18")))]
     #[doc(alias = "webkit_context_menu_item_get_gaction")]
@@ -101,10 +90,6 @@ pub trait ContextMenuItemExt: 'static {
 }
 
 impl<O: IsA<ContextMenuItem>> ContextMenuItemExt for O {
-    //fn action(&self) -> /*Ignored*/Option<gtk::Action> {
-    //    unsafe { TODO: call ffi:webkit_context_menu_item_get_action() }
-    //}
-
     #[cfg(any(feature = "v2_18", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_18")))]
     fn gaction(&self) -> Option<gio::Action> {

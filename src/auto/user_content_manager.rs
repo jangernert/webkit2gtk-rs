@@ -96,6 +96,16 @@ pub trait UserContentManagerExt: 'static {
     #[doc(alias = "webkit_user_content_manager_remove_filter_by_id")]
     fn remove_filter_by_id(&self, filter_id: &str);
 
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    #[doc(alias = "webkit_user_content_manager_remove_script")]
+    fn remove_script(&self, script: &UserScript);
+
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    #[doc(alias = "webkit_user_content_manager_remove_style_sheet")]
+    fn remove_style_sheet(&self, stylesheet: &UserStyleSheet);
+
     #[cfg(any(feature = "v2_8", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
     #[doc(alias = "webkit_user_content_manager_unregister_script_message_handler")]
@@ -176,6 +186,22 @@ impl<O: IsA<UserContentManager>> UserContentManagerExt for O {
     fn remove_filter_by_id(&self, filter_id: &str) {
         unsafe {
             ffi::webkit_user_content_manager_remove_filter_by_id(self.as_ref().to_glib_none().0, filter_id.to_glib_none().0);
+        }
+    }
+
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    fn remove_script(&self, script: &UserScript) {
+        unsafe {
+            ffi::webkit_user_content_manager_remove_script(self.as_ref().to_glib_none().0, script.to_glib_none().0);
+        }
+    }
+
+    #[cfg(any(feature = "v2_32", feature = "dox"))]
+    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    fn remove_style_sheet(&self, stylesheet: &UserStyleSheet) {
+        unsafe {
+            ffi::webkit_user_content_manager_remove_style_sheet(self.as_ref().to_glib_none().0, stylesheet.to_glib_none().0);
         }
     }
 

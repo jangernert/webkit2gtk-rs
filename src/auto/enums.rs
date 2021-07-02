@@ -3747,6 +3747,8 @@ pub enum WebProcessTerminationReason {
     Crashed,
     #[doc(alias = "WEBKIT_WEB_PROCESS_EXCEEDED_MEMORY_LIMIT")]
     ExceededMemoryLimit,
+    #[doc(alias = "WEBKIT_WEB_PROCESS_TERMINATED_BY_API")]
+    TerminatedByApi,
 #[doc(hidden)]
     __Unknown(i32),
 }
@@ -3758,6 +3760,7 @@ impl fmt::Display for WebProcessTerminationReason {
         write!(f, "WebProcessTerminationReason::{}", match *self {
             Self::Crashed => "Crashed",
             Self::ExceededMemoryLimit => "ExceededMemoryLimit",
+            Self::TerminatedByApi => "TerminatedByApi",
             _ => "Unknown",
         })
     }
@@ -3773,6 +3776,7 @@ impl IntoGlib for WebProcessTerminationReason {
         match self {
             Self::Crashed => ffi::WEBKIT_WEB_PROCESS_CRASHED,
             Self::ExceededMemoryLimit => ffi::WEBKIT_WEB_PROCESS_EXCEEDED_MEMORY_LIMIT,
+            Self::TerminatedByApi => ffi::WEBKIT_WEB_PROCESS_TERMINATED_BY_API,
             Self::__Unknown(value) => value,
 }
     }
@@ -3787,6 +3791,7 @@ impl FromGlib<ffi::WebKitWebProcessTerminationReason> for WebProcessTerminationR
         match value {
             ffi::WEBKIT_WEB_PROCESS_CRASHED => Self::Crashed,
             ffi::WEBKIT_WEB_PROCESS_EXCEEDED_MEMORY_LIMIT => Self::ExceededMemoryLimit,
+            ffi::WEBKIT_WEB_PROCESS_TERMINATED_BY_API => Self::TerminatedByApi,
             value => Self::__Unknown(value),
 }
     }

@@ -122,7 +122,9 @@ pub use self::option_menu::{OptionMenu, NONE_OPTION_MENU};
 mod permission_request;
 pub use self::permission_request::{PermissionRequest, NONE_PERMISSION_REQUEST};
 
+#[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
 mod plugin;
+#[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
 pub use self::plugin::{Plugin, NONE_PLUGIN};
 
 mod pointer_lock_permission_request;
@@ -458,6 +460,7 @@ pub mod traits {
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_18")))]
     pub use super::option_menu::OptionMenuExt;
     pub use super::permission_request::PermissionRequestExt;
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     pub use super::plugin::PluginExt;
     pub use super::policy_decision::PolicyDecisionExt;
     #[cfg(any(feature = "v2_16", feature = "dox"))]

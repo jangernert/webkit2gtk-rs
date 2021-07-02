@@ -122,9 +122,6 @@ pub struct WebContextBuilder {
     #[cfg(any(feature = "v2_28", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
     process_swap_on_cross_site_navigation_enabled: Option<bool>,
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
-    use_system_appearance_for_scrollbars: Option<bool>,
     #[cfg(any(feature = "v2_10", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     website_data_manager: Option<WebsiteDataManager>,
@@ -150,10 +147,6 @@ if let Some(ref local_storage_directory) = self.local_storage_directory {
 if let Some(ref process_swap_on_cross_site_navigation_enabled) = self.process_swap_on_cross_site_navigation_enabled {
                 properties.push(("process-swap-on-cross-site-navigation-enabled", process_swap_on_cross_site_navigation_enabled));
             }
-        #[cfg(any(feature = "v2_30", feature = "dox"))]
-if let Some(ref use_system_appearance_for_scrollbars) = self.use_system_appearance_for_scrollbars {
-                properties.push(("use-system-appearance-for-scrollbars", use_system_appearance_for_scrollbars));
-            }
         #[cfg(any(feature = "v2_10", feature = "dox"))]
 if let Some(ref website_data_manager) = self.website_data_manager {
                 properties.push(("website-data-manager", website_data_manager));
@@ -175,13 +168,6 @@ if let Some(ref website_data_manager) = self.website_data_manager {
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
     pub fn process_swap_on_cross_site_navigation_enabled(mut self, process_swap_on_cross_site_navigation_enabled: bool) -> Self {
         self.process_swap_on_cross_site_navigation_enabled = Some(process_swap_on_cross_site_navigation_enabled);
-        self
-    }
-
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
-    pub fn use_system_appearance_for_scrollbars(mut self, use_system_appearance_for_scrollbars: bool) -> Self {
-        self.use_system_appearance_for_scrollbars = Some(use_system_appearance_for_scrollbars);
         self
     }
 
@@ -234,10 +220,12 @@ pub trait WebContextExt: 'static {
     #[doc(alias = "get_geolocation_manager")]
     fn geolocation_manager(&self) -> Option<GeolocationManager>;
 
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     #[doc(alias = "webkit_web_context_get_plugins")]
     #[doc(alias = "get_plugins")]
     fn plugins<P: IsA<gio::Cancellable>, Q: FnOnce(Result<Vec<Plugin>, glib::Error>) + Send + 'static>(&self, cancellable: Option<&P>, callback: Q);
 
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     
     fn plugins_future(&self) -> Pin<Box_<dyn std::future::Future<Output = Result<Vec<Plugin>, glib::Error>> + 'static>>;
 
@@ -265,6 +253,7 @@ pub trait WebContextExt: 'static {
     #[doc(alias = "get_spell_checking_languages")]
     fn spell_checking_languages(&self) -> Vec<glib::GString>;
 
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     #[doc(alias = "webkit_web_context_get_tls_errors_policy")]
     #[doc(alias = "get_tls_errors_policy")]
     fn tls_errors_policy(&self) -> TLSErrorsPolicy;
@@ -314,6 +303,7 @@ pub trait WebContextExt: 'static {
     #[doc(alias = "webkit_web_context_send_message_to_all_extensions")]
     fn send_message_to_all_extensions<P: IsA<UserMessage>>(&self, message: &P);
 
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     #[doc(alias = "webkit_web_context_set_additional_plugins_directory")]
     fn set_additional_plugins_directory(&self, directory: &str);
 
@@ -351,6 +341,7 @@ pub trait WebContextExt: 'static {
     #[doc(alias = "webkit_web_context_set_spell_checking_languages")]
     fn set_spell_checking_languages(&self, languages: &[&str]);
 
+    #[cfg_attr(feature = "v2_32", deprecated = "Since 2.32")]
     #[doc(alias = "webkit_web_context_set_tls_errors_policy")]
     fn set_tls_errors_policy(&self, policy: TLSErrorsPolicy);
 
@@ -406,11 +397,6 @@ pub trait WebContextExt: 'static {
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
     #[doc(alias = "user-message-received")]
     fn connect_user_message_received<F: Fn(&Self, &UserMessage) -> bool + 'static>(&self, f: F) -> SignalHandlerId;
-
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
-    #[doc(alias = "use-system-appearance-for-scrollbars")]
-    fn connect_use_system_appearance_for_scrollbars_notify<F: Fn(&Self) + 'static>(&self, f: F) -> SignalHandlerId;
 }
 
 impl<O: IsA<WebContext>> WebContextExt for O {
@@ -809,20 +795,6 @@ impl<O: IsA<WebContext>> WebContextExt for O {
             let f: Box_<F> = Box_::new(f);
             connect_raw(self.as_ptr() as *mut _, b"user-message-received\0".as_ptr() as *const _,
                 Some(transmute::<_, unsafe extern "C" fn()>(user_message_received_trampoline::<Self, F> as *const ())), Box_::into_raw(f))
-        }
-    }
-
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
-    fn connect_use_system_appearance_for_scrollbars_notify<F: Fn(&Self) + 'static>(&self, f: F) -> SignalHandlerId {
-        unsafe extern "C" fn notify_use_system_appearance_for_scrollbars_trampoline<P: IsA<WebContext>, F: Fn(&P) + 'static>(this: *mut ffi::WebKitWebContext, _param_spec: glib::ffi::gpointer, f: glib::ffi::gpointer) {
-            let f: &F = &*(f as *const F);
-            f(WebContext::from_glib_borrow(this).unsafe_cast_ref())
-        }
-        unsafe {
-            let f: Box_<F> = Box_::new(f);
-            connect_raw(self.as_ptr() as *mut _, b"notify::use-system-appearance-for-scrollbars\0".as_ptr() as *const _,
-                Some(transmute::<_, unsafe extern "C" fn()>(notify_use_system_appearance_for_scrollbars_trampoline::<Self, F> as *const ())), Box_::into_raw(f))
         }
     }
 }
