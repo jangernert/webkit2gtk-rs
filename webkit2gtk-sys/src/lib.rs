@@ -6,14 +6,14 @@
 #![allow(clippy::approx_constant, clippy::type_complexity, clippy::unreadable_literal, clippy::upper_case_acronyms)]
 #![cfg_attr(feature = "dox", feature(doc_cfg))]
 
-use gtk_sys as gtk;
 use glib_sys as glib;
 use gobject_sys as gobject;
 use gio_sys as gio;
-use gdk_sys as gdk;
 use cairo_sys as cairo;
 use soup_sys as soup;
 use javascriptcore_sys as java_script_core;
+use gdk4_sys as gdk;
+use gtk4_sys as gtk;
 
 #[allow(unused_imports)]
 use libc::{c_int, c_char, c_uchar, c_float, c_uint, c_double,

@@ -8,14 +8,14 @@ single_version_file = "."
 target_path = "."
 
 external_libraries = [
-    "Gtk",
     "GLib",
     "GObject",
     "Gio",
-    "Gdk",
     "Cairo",
     "Soup",
 ]
 
 [external_libraries]
 javascriptcore = "JavaScriptCore"
+gdk4 = "Gdk"
+gtk4 = "Gtk"
