@@ -12,6 +12,6 @@ fn main() {} // prevent linking libraries to avoid documentation failure
 fn main() {
     if let Err(s) = system_deps::Config::new().probe() {
         println!("cargo:warning={}", s);
-        process::exit(1);
+        //process::exit(1);
     }
 }

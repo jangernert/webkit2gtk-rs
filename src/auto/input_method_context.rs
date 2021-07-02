@@ -27,8 +27,8 @@ glib::wrapper! {
 pub const NONE_INPUT_METHOD_CONTEXT: Option<&InputMethodContext> = None;
 
 pub trait InputMethodContextExt: 'static {
-    #[doc(alias = "webkit_input_method_context_filter_key_event")]
-    fn filter_key_event<P: IsA<gdk::Event>>(&self, key_event: &P) -> bool;
+    // #[doc(alias = "webkit_input_method_context_filter_key_event")]
+    // fn filter_key_event(&self, key_event: &gdk::Event) -> bool;
 
     #[doc(alias = "webkit_input_method_context_get_input_hints")]
     #[doc(alias = "get_input_hints")]
@@ -111,11 +111,11 @@ pub trait InputMethodContextExt: 'static {
 }
 
 impl<O: IsA<InputMethodContext>> InputMethodContextExt for O {
-    fn filter_key_event<P: IsA<gdk::Event>>(&self, key_event: &P) -> bool {
-        unsafe {
-            from_glib(ffi::webkit_input_method_context_filter_key_event(self.as_ref().to_glib_none().0, key_event.as_ref().to_glib_none().0))
-        }
-    }
+    // fn filter_key_event(&self, key_event: &gdk::Event) -> bool {
+    //     unsafe {
+    //         from_glib(ffi::webkit_input_method_context_filter_key_event(self.as_ref().to_glib_none().0, key_event.as_ref().to_glib_none().0))
+    //     }
+    // }
 
     fn input_hints(&self) -> InputHints {
         unsafe {
