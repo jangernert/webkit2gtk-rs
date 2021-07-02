@@ -12,8 +12,6 @@ single_version_file = true
 
 external_libraries = [
     "Gio",
-    "Gtk",
-    "JavaScriptCore",
 ]
 
 generate = [
@@ -284,3 +282,8 @@ generate_builder = true
 name = "WebKit2.WindowProperties"
 status = "generate"
 generate_builder = true
+
+[external_libraries]
+javascriptcore = "JavaScriptCore"
+gdk4 = "Gdk"
+gtk4 = "Gtk"
