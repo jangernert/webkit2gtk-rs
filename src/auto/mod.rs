@@ -217,8 +217,8 @@ mod website_data_manager;
 //#[cfg(any(feature = "v2_10", feature = "dox"))]
 //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
 pub use self::website_data_manager::{WebsiteDataManager, NONE_WEBSITE_DATA_MANAGER};
-#[cfg(any(feature = "v2_10", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+//#[cfg(any(feature = "v2_10", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
 pub use self::website_data_manager::WebsiteDataManagerBuilder;
 
 #[cfg(any(feature = "v2_30", feature = "dox"))]
@@ -256,18 +256,18 @@ mod geolocation_position;
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_26")))]
 pub use self::geolocation_position::GeolocationPosition;
 
-#[cfg(any(feature = "v2_30", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+//#[cfg(any(feature = "v2_30", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 mod itp_first_party;
-#[cfg(any(feature = "v2_30", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+//#[cfg(any(feature = "v2_30", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 pub use self::itp_first_party::ITPFirstParty;
 
-#[cfg(any(feature = "v2_30", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+//#[cfg(any(feature = "v2_30", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 mod itp_third_party;
-#[cfg(any(feature = "v2_30", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+//#[cfg(any(feature = "v2_30", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 pub use self::itp_third_party::ITPThirdParty;
 
 #[cfg(any(feature = "v2_28", feature = "dox"))]
@@ -290,11 +290,11 @@ mod navigation_action;
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 pub use self::navigation_action::NavigationAction;
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 mod network_proxy_settings;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 pub use self::network_proxy_settings::NetworkProxySettings;
 
 #[cfg(any(feature = "v2_18", feature = "dox"))]
@@ -332,11 +332,11 @@ mod web_view_session_state;
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_12")))]
 pub use self::web_view_session_state::WebViewSessionState;
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 mod website_data;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 pub use self::website_data::WebsiteData;
 
 mod enums;
@@ -369,8 +369,8 @@ pub use self::enums::JavascriptError;
 pub use self::enums::LoadEvent;
 pub use self::enums::NavigationType;
 pub use self::enums::NetworkError;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 pub use self::enums::NetworkProxyMode;
 pub use self::enums::PluginError;
 pub use self::enums::PolicyDecisionType;

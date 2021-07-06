@@ -1984,8 +1984,8 @@ impl ToValue for NetworkError {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
 #[derive(Clone, Copy)]
 #[non_exhaustive]
@@ -2001,8 +2001,8 @@ pub enum NetworkProxyMode {
     __Unknown(i32),
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl fmt::Display for NetworkProxyMode {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "NetworkProxyMode::{}", match *self {
@@ -2014,9 +2014,9 @@ impl fmt::Display for NetworkProxyMode {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
-#[doc(hidden)]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[doc(hidden)]
 impl IntoGlib for NetworkProxyMode {
     type GlibType = ffi::WebKitNetworkProxyMode;
 
@@ -2030,9 +2030,9 @@ impl IntoGlib for NetworkProxyMode {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
-#[doc(hidden)]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[doc(hidden)]
 impl FromGlib<ffi::WebKitNetworkProxyMode> for NetworkProxyMode {
     unsafe fn from_glib(value: ffi::WebKitNetworkProxyMode) -> Self {
         skip_assert_initialized!();
@@ -2045,22 +2045,22 @@ impl FromGlib<ffi::WebKitNetworkProxyMode> for NetworkProxyMode {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl StaticType for NetworkProxyMode {
     fn static_type() -> Type {
         unsafe { from_glib(ffi::webkit_network_proxy_mode_get_type()) }
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl glib::value::ValueType for NetworkProxyMode {
     type Type = Self;
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 unsafe impl<'a> FromValue<'a> for NetworkProxyMode {
     type Checker = glib::value::GenericValueTypeChecker<Self>;
 
@@ -2070,8 +2070,8 @@ unsafe impl<'a> FromValue<'a> for NetworkProxyMode {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl ToValue for NetworkProxyMode {
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();

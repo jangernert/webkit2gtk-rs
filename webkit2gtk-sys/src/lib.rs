@@ -2800,8 +2800,8 @@ extern "C" {
     //=========================================================================
     // WebKitNetworkProxyMode
     //=========================================================================
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_network_proxy_mode_get_type() -> GType;
 
     //=========================================================================
@@ -3020,37 +3020,37 @@ extern "C" {
     // WebKitITPFirstParty
     //=========================================================================
     pub fn webkit_itp_first_party_get_type() -> GType;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_first_party_get_domain(itp_first_party: *mut WebKitITPFirstParty) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_first_party_get_last_update_time(itp_first_party: *mut WebKitITPFirstParty) -> *mut glib::GDateTime;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_first_party_get_website_data_access_allowed(itp_first_party: *mut WebKitITPFirstParty) -> gboolean;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_first_party_ref(itp_first_party: *mut WebKitITPFirstParty) -> *mut WebKitITPFirstParty;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_first_party_unref(itp_first_party: *mut WebKitITPFirstParty);
 
     //=========================================================================
     // WebKitITPThirdParty
     //=========================================================================
     pub fn webkit_itp_third_party_get_type() -> GType;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_third_party_get_domain(itp_third_party: *mut WebKitITPThirdParty) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_third_party_get_first_parties(itp_third_party: *mut WebKitITPThirdParty) -> *mut glib::GList;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_third_party_ref(itp_third_party: *mut WebKitITPThirdParty) -> *mut WebKitITPThirdParty;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_itp_third_party_unref(itp_third_party: *mut WebKitITPThirdParty);
 
     //=========================================================================
@@ -3125,17 +3125,17 @@ extern "C" {
     // WebKitNetworkProxySettings
     //=========================================================================
     pub fn webkit_network_proxy_settings_get_type() -> GType;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_network_proxy_settings_new(default_proxy_uri: *const c_char, ignore_hosts: *const *const c_char) -> *mut WebKitNetworkProxySettings;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_network_proxy_settings_add_proxy_for_scheme(proxy_settings: *mut WebKitNetworkProxySettings, scheme: *const c_char, proxy_uri: *const c_char);
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_network_proxy_settings_copy(proxy_settings: *mut WebKitNetworkProxySettings) -> *mut WebKitNetworkProxySettings;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_network_proxy_settings_free(proxy_settings: *mut WebKitNetworkProxySettings);
 
     //=========================================================================
@@ -3287,20 +3287,20 @@ extern "C" {
     // WebKitWebsiteData
     //=========================================================================
     pub fn webkit_website_data_get_type() -> GType;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_get_name(website_data: *mut WebKitWebsiteData) -> *const c_char;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_get_size(website_data: *mut WebKitWebsiteData, types: WebKitWebsiteDataTypes) -> u64;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_get_types(website_data: *mut WebKitWebsiteData) -> WebKitWebsiteDataTypes;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_ref(website_data: *mut WebKitWebsiteData) -> *mut WebKitWebsiteData;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_unref(website_data: *mut WebKitWebsiteData);
 
     //=========================================================================
