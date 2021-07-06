@@ -4381,95 +4381,95 @@ extern "C" {
     // WebKitWebsiteDataManager
     //=========================================================================
     pub fn webkit_website_data_manager_get_type() -> GType;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_new(first_option_name: *const c_char, ...) -> *mut WebKitWebsiteDataManager;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_new_ephemeral() -> *mut WebKitWebsiteDataManager;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_clear(manager: *mut WebKitWebsiteDataManager, types: WebKitWebsiteDataTypes, timespan: glib::GTimeSpan, cancellable: *mut gio::GCancellable, callback: gio::GAsyncReadyCallback, user_data: gpointer);
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_clear_finish(manager: *mut WebKitWebsiteDataManager, result: *mut gio::GAsyncResult, error: *mut *mut glib::GError) -> gboolean;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_fetch(manager: *mut WebKitWebsiteDataManager, types: WebKitWebsiteDataTypes, cancellable: *mut gio::GCancellable, callback: gio::GAsyncReadyCallback, user_data: gpointer);
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_fetch_finish(manager: *mut WebKitWebsiteDataManager, result: *mut gio::GAsyncResult, error: *mut *mut glib::GError) -> *mut glib::GList;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_base_cache_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_base_data_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_get_cookie_manager(manager: *mut WebKitWebsiteDataManager) -> *mut WebKitCookieManager;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_disk_cache_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_dom_cache_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_26", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_26")))]
+    //#[cfg(any(feature = "v2_26", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_26")))]
     pub fn webkit_website_data_manager_get_hsts_cache_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_indexeddb_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_itp_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_itp_enabled(manager: *mut WebKitWebsiteDataManager) -> gboolean;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_itp_summary(manager: *mut WebKitWebsiteDataManager, cancellable: *mut gio::GCancellable, callback: gio::GAsyncReadyCallback, user_data: gpointer);
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_itp_summary_finish(manager: *mut WebKitWebsiteDataManager, result: *mut gio::GAsyncResult, error: *mut *mut glib::GError) -> *mut glib::GList;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_local_storage_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_offline_application_cache_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_persistent_credential_storage_enabled(manager: *mut WebKitWebsiteDataManager) -> gboolean;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_get_service_worker_registrations_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_32", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    //#[cfg(any(feature = "v2_32", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
     pub fn webkit_website_data_manager_get_tls_errors_policy(manager: *mut WebKitWebsiteDataManager) -> WebKitTLSErrorsPolicy;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_website_data_manager_get_websql_directory(manager: *mut WebKitWebsiteDataManager) -> *const c_char;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_is_ephemeral(manager: *mut WebKitWebsiteDataManager) -> gboolean;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_remove(manager: *mut WebKitWebsiteDataManager, types: WebKitWebsiteDataTypes, website_data: *mut glib::GList, cancellable: *mut gio::GCancellable, callback: gio::GAsyncReadyCallback, user_data: gpointer);
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_manager_remove_finish(manager: *mut WebKitWebsiteDataManager, result: *mut gio::GAsyncResult, error: *mut *mut glib::GError) -> gboolean;
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_set_itp_enabled(manager: *mut WebKitWebsiteDataManager, enabled: gboolean);
-    #[cfg(any(feature = "v2_32", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    //#[cfg(any(feature = "v2_32", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
     pub fn webkit_website_data_manager_set_network_proxy_settings(manager: *mut WebKitWebsiteDataManager, proxy_mode: WebKitNetworkProxyMode, proxy_settings: *mut WebKitNetworkProxySettings);
-    #[cfg(any(feature = "v2_30", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
+    //#[cfg(any(feature = "v2_30", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub fn webkit_website_data_manager_set_persistent_credential_storage_enabled(manager: *mut WebKitWebsiteDataManager, enabled: gboolean);
-    #[cfg(any(feature = "v2_32", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
+    //#[cfg(any(feature = "v2_32", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_32")))]
     pub fn webkit_website_data_manager_set_tls_errors_policy(manager: *mut WebKitWebsiteDataManager, policy: WebKitTLSErrorsPolicy);
 
     //=========================================================================
