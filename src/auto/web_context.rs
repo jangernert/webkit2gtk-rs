@@ -271,10 +271,10 @@ pub trait WebContextExt: 'static {
     #[doc(alias = "get_web_process_count_limit")]
     fn web_process_count_limit(&self) -> u32;
 
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
-    #[doc(alias = "webkit_web_context_get_website_data_manager")]
-    #[doc(alias = "get_website_data_manager")]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[doc(alias = "webkit_web_context_get_website_data_manager")]
+    //#[doc(alias = "get_website_data_manager")]
     fn website_data_manager(&self) -> Option<WebsiteDataManager>;
 
     #[cfg(any(feature = "v2_16", feature = "dox"))]
@@ -544,8 +544,8 @@ impl<O: IsA<WebContext>> WebContextExt for O {
         }
     }
 
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     fn website_data_manager(&self) -> Option<WebsiteDataManager> {
         unsafe {
             from_glib_none(ffi::webkit_web_context_get_website_data_manager(self.as_ref().to_glib_none().0))
