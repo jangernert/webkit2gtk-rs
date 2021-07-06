@@ -8,14 +8,10 @@
 extern crate bitflags;
 extern crate cairo;
 extern crate gdk4 as gdk;
-extern crate gdk4_sys;
 extern crate gio;
-extern crate gio_sys;
-extern crate glib;
-extern crate glib_sys;
 extern crate gobject_sys;
+extern crate glib;
 extern crate gtk4 as gtk;
-extern crate gtk4_sys;
 extern crate javascriptcore as java_script_core;
 extern crate libc;
 

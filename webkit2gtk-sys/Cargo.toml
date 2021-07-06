@@ -6,7 +6,6 @@ pkg-config = "0.3.7"
 system-deps = "3"
 
 [dependencies]
-atk-sys = "^0.14.0"
 bitflags = "^1.0"
 cairo-sys-rs = "^0.14.0"
 gdk-pixbuf-sys = "^0.14.0"
