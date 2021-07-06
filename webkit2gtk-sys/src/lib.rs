@@ -4150,8 +4150,8 @@ extern "C" {
     #[cfg(any(feature = "v2_10", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_web_context_get_web_process_count_limit(context: *mut WebKitWebContext) -> c_uint;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_web_context_get_website_data_manager(context: *mut WebKitWebContext) -> *mut WebKitWebsiteDataManager;
     #[cfg(any(feature = "v2_16", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
@@ -4280,8 +4280,8 @@ extern "C" {
     #[cfg(any(feature = "v2_6", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_web_view_get_user_content_manager(web_view: *mut WebKitWebView) -> *mut WebKitUserContentManager;
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_web_view_get_website_data_manager(web_view: *mut WebKitWebView) -> *mut WebKitWebsiteDataManager;
     #[cfg(any(feature = "v2_30", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]

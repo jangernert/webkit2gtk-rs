@@ -63,8 +63,8 @@ use crate::WebViewBase;
 #[cfg(any(feature = "v2_12", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_12")))]
 use crate::WebViewSessionState;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use crate::WebsiteDataManager;
 #[cfg(any(feature = "v2_30", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
@@ -690,10 +690,10 @@ pub trait WebViewExt: 'static {
     #[doc(alias = "get_user_content_manager")]
     fn user_content_manager(&self) -> Option<UserContentManager>;
 
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
-    #[doc(alias = "webkit_web_view_get_website_data_manager")]
-    #[doc(alias = "get_website_data_manager")]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[doc(alias = "webkit_web_view_get_website_data_manager")]
+    //#[doc(alias = "get_website_data_manager")]
     fn website_data_manager(&self) -> Option<WebsiteDataManager>;
 
     #[cfg(any(feature = "v2_30", feature = "dox"))]
@@ -1263,8 +1263,8 @@ impl<O: IsA<WebView>> WebViewExt for O {
         }
     }
 
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     fn website_data_manager(&self) -> Option<WebsiteDataManager> {
         unsafe {
             from_glib_none(ffi::webkit_web_view_get_website_data_manager(self.as_ref().to_glib_none().0))
