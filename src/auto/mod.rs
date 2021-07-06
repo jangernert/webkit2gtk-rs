@@ -211,11 +211,11 @@ mod website_data_access_permission_request;
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
 pub use self::website_data_access_permission_request::{WebsiteDataAccessPermissionRequest, NONE_WEBSITE_DATA_ACCESS_PERMISSION_REQUEST};
 
-#[cfg(any(feature = "v2_10", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+//#[cfg(any(feature = "v2_10", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
 mod website_data_manager;
-#[cfg(any(feature = "v2_10", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+//#[cfg(any(feature = "v2_10", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
 pub use self::website_data_manager::{WebsiteDataManager, NONE_WEBSITE_DATA_MANAGER};
 #[cfg(any(feature = "v2_10", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
@@ -487,8 +487,8 @@ pub mod traits {
     #[cfg(any(feature = "v2_30", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]
     pub use super::website_data_access_permission_request::WebsiteDataAccessPermissionRequestExt;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub use super::website_data_manager::WebsiteDataManagerExt;
     #[cfg(any(feature = "v2_30", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_30")))]

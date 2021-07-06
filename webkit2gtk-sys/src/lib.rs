@@ -4115,8 +4115,8 @@ extern "C" {
     #[cfg(any(feature = "v2_16", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_web_context_new_ephemeral() -> *mut WebKitWebContext;
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     pub fn webkit_web_context_new_with_website_data_manager(manager: *mut WebKitWebsiteDataManager) -> *mut WebKitWebContext;
     pub fn webkit_web_context_get_default() -> *mut WebKitWebContext;
     #[cfg(any(feature = "v2_26", feature = "dox"))]

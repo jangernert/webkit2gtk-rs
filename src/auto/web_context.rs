@@ -25,8 +25,8 @@ use crate::URISchemeRequest;
 #[cfg(any(feature = "v2_28", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
 use crate::UserMessage;
-#[cfg(any(feature = "v2_10", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+//#[cfg(any(feature = "v2_10", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
 use crate::WebsiteDataManager;
 use glib::object::Cast;
 use glib::object::IsA;
@@ -71,8 +71,8 @@ impl WebContext {
         }
     }
 
-    #[cfg(any(feature = "v2_10", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
+    //#[cfg(any(feature = "v2_10", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_10")))]
     #[doc(alias = "webkit_web_context_new_with_website_data_manager")]
     #[doc(alias = "new_with_website_data_manager")]
     pub fn with_website_data_manager<P: IsA<WebsiteDataManager>>(manager: &P) -> WebContext {

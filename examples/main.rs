@@ -23,7 +23,7 @@
  extern crate webkit2gtk;
  
  use gtk4::prelude::*;
- use webkit2gtk::{traits::WebViewExt, WebContext, WebView};
+ use webkit2gtk::{traits::{WebContextExt, WebViewExt}, WebContext, WebView};
  
  fn main() {
      let application =
