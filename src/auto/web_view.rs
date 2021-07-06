@@ -815,9 +815,9 @@ pub trait WebViewExt: 'static {
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
     fn send_message_to_page_future<P: IsA<UserMessage> + Clone + 'static>(&self, message: &P) -> Pin<Box_<dyn std::future::Future<Output = Result<UserMessage, glib::Error>> + 'static>>;
 
-    #[cfg(any(feature = "v2_8", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
-    #[doc(alias = "webkit_web_view_set_background_color")]
+    //#[cfg(any(feature = "v2_8", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
+    //#[doc(alias = "webkit_web_view_set_background_color")]
     fn set_background_color(&self, rgba: &gdk::RGBA);
 
     #[cfg(any(feature = "v2_34", feature = "dox"))]
@@ -1593,8 +1593,8 @@ impl<O: IsA<WebView>> WebViewExt for O {
         }))
     }
 
-    #[cfg(any(feature = "v2_8", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
+    //#[cfg(any(feature = "v2_8", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
     fn set_background_color(&self, rgba: &gdk::RGBA) {
         unsafe {
             ffi::webkit_web_view_set_background_color(self.as_ref().to_glib_none().0, rgba.to_glib_none().0);

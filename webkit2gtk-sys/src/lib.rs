@@ -4335,8 +4335,8 @@ extern "C" {
     #[cfg(any(feature = "v2_28", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
     pub fn webkit_web_view_send_message_to_page_finish(web_view: *mut WebKitWebView, result: *mut gio::GAsyncResult, error: *mut *mut glib::GError) -> *mut WebKitUserMessage;
-    #[cfg(any(feature = "v2_8", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
+    //#[cfg(any(feature = "v2_8", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_8")))]
     pub fn webkit_web_view_set_background_color(web_view: *mut WebKitWebView, rgba: *const gdk::GdkRGBA);
     #[cfg(any(feature = "v2_34", feature = "dox"))]
     #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_34")))]
