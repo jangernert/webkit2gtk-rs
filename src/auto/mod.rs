@@ -414,8 +414,8 @@ pub use self::flags::HitTestResultContext;
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_28")))]
 pub use self::flags::InputHints;
 pub use self::flags::SnapshotOptions;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 pub use self::flags::WebsiteDataTypes;
 
 #[doc(hidden)]

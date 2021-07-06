@@ -408,8 +408,8 @@ impl ToValue for SnapshotOptions {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 bitflags! {
     #[doc(alias = "WebKitWebsiteDataTypes")]
     pub struct WebsiteDataTypes: u32 {
@@ -446,16 +446,16 @@ bitflags! {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl fmt::Display for WebsiteDataTypes {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         <Self as fmt::Debug>::fmt(self, f)
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 #[doc(hidden)]
 impl IntoGlib for WebsiteDataTypes {
     type GlibType = ffi::WebKitWebsiteDataTypes;
@@ -465,8 +465,8 @@ impl IntoGlib for WebsiteDataTypes {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 #[doc(hidden)]
 impl FromGlib<ffi::WebKitWebsiteDataTypes> for WebsiteDataTypes {
     unsafe fn from_glib(value: ffi::WebKitWebsiteDataTypes) -> Self {
@@ -475,22 +475,22 @@ impl FromGlib<ffi::WebKitWebsiteDataTypes> for WebsiteDataTypes {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl StaticType for WebsiteDataTypes {
     fn static_type() -> Type {
         unsafe { from_glib(ffi::webkit_website_data_types_get_type()) }
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl glib::value::ValueType for WebsiteDataTypes {
     type Type = Self;
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 unsafe impl<'a> FromValue<'a> for WebsiteDataTypes {
     type Checker = glib::value::GenericValueTypeChecker<Self>;
 
@@ -500,8 +500,8 @@ unsafe impl<'a> FromValue<'a> for WebsiteDataTypes {
     }
 }
 
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 impl ToValue for WebsiteDataTypes {
     fn to_value(&self) -> glib::Value {
         let mut value = glib::Value::for_value_type::<Self>();

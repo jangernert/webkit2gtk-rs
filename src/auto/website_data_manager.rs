@@ -20,23 +20,23 @@ use crate::TLSErrorsPolicy;
 #[cfg(any(feature = "v2_16", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use crate::WebsiteData;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use crate::WebsiteDataTypes;
 use glib::object::Cast;
 use glib::object::IsA;
 use glib::translate::*;
 use glib::StaticType;
 use glib::ToValue;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use std::boxed::Box as Box_;
 use std::fmt;
 #[cfg(any(feature = "v2_16", feature = "dox"))]
 #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use std::pin::Pin;
-#[cfg(any(feature = "v2_16", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+//#[cfg(any(feature = "v2_16", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
 use std::ptr;
 
 glib::wrapper! {
@@ -273,8 +273,8 @@ if let Some(ref websql_directory) = self.websql_directory {
 pub const NONE_WEBSITE_DATA_MANAGER: Option<&WebsiteDataManager> = None;
 
 pub trait WebsiteDataManagerExt: 'static {
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     #[doc(alias = "webkit_website_data_manager_clear")]
     fn clear<P: IsA<gio::Cancellable>, Q: FnOnce(Result<(), glib::Error>) + Send + 'static>(&self, types: WebsiteDataTypes, timespan: glib::TimeSpan, cancellable: Option<&P>, callback: Q);
 
@@ -408,8 +408,8 @@ pub trait WebsiteDataManagerExt: 'static {
 }
 
 impl<O: IsA<WebsiteDataManager>> WebsiteDataManagerExt for O {
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     fn clear<P: IsA<gio::Cancellable>, Q: FnOnce(Result<(), glib::Error>) + Send + 'static>(&self, types: WebsiteDataTypes, timespan: glib::TimeSpan, cancellable: Option<&P>, callback: Q) {
         let user_data: Box_<Q> = Box_::new(callback);
         unsafe extern "C" fn clear_trampoline<Q: FnOnce(Result<(), glib::Error>) + Send + 'static>(_source_object: *mut glib::gobject_ffi::GObject, res: *mut gio::ffi::GAsyncResult, user_data: glib::ffi::gpointer) {

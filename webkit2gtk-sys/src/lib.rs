@@ -2943,8 +2943,8 @@ extern "C" {
     //=========================================================================
     // WebKitWebsiteDataTypes
     //=========================================================================
-    #[cfg(any(feature = "v2_16", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
+    //#[cfg(any(feature = "v2_16", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_16")))]
     pub fn webkit_website_data_types_get_type() -> GType;
 
     //=========================================================================
