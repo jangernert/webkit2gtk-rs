@@ -2,14 +2,14 @@
 // from gir-files (https://github.com/gtk-rs/gir-files.git)
 // DO NOT EDIT
 
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 use crate::NavigationType;
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 use crate::URIRequest;
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 use glib::translate::*;
 
 glib::wrapper! {

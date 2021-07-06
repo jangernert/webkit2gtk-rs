@@ -2,8 +2,8 @@
 // from gir-files (https://github.com/gtk-rs/gir-files.git)
 // DO NOT EDIT
 
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 use crate::NavigationAction;
 use crate::NavigationType;
 use crate::PolicyDecision;
@@ -43,10 +43,10 @@ pub trait NavigationPolicyDecisionExt: 'static {
     #[doc(alias = "get_mouse_button")]
     fn mouse_button(&self) -> u32;
 
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
-    #[doc(alias = "webkit_navigation_policy_decision_get_navigation_action")]
-    #[doc(alias = "get_navigation_action")]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[doc(alias = "webkit_navigation_policy_decision_get_navigation_action")]
+    //#[doc(alias = "get_navigation_action")]
     fn navigation_action(&self) -> Option<NavigationAction>;
 
     #[cfg_attr(feature = "v2_6", deprecated = "Since 2.6")]
@@ -103,8 +103,8 @@ impl<O: IsA<NavigationPolicyDecision>> NavigationPolicyDecisionExt for O {
         }
     }
 
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     fn navigation_action(&self) -> Option<NavigationAction> {
         unsafe {
             from_glib_none(ffi::webkit_navigation_policy_decision_get_navigation_action(self.as_ref().to_glib_none().0))

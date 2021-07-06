@@ -283,11 +283,11 @@ pub use self::javascript_result::JavascriptResult;
 mod mime_info;
 pub use self::mime_info::MimeInfo;
 
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 mod navigation_action;
-#[cfg(any(feature = "v2_6", feature = "dox"))]
-#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+//#[cfg(any(feature = "v2_6", feature = "dox"))]
+//#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
 pub use self::navigation_action::NavigationAction;
 
 //#[cfg(any(feature = "v2_16", feature = "dox"))]

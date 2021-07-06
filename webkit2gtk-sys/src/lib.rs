@@ -3096,29 +3096,29 @@ extern "C" {
     // WebKitNavigationAction
     //=========================================================================
     pub fn webkit_navigation_action_get_type() -> GType;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_copy(navigation: *mut WebKitNavigationAction) -> *mut WebKitNavigationAction;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_free(navigation: *mut WebKitNavigationAction);
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_get_modifiers(navigation: *mut WebKitNavigationAction) -> c_uint;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_get_mouse_button(navigation: *mut WebKitNavigationAction) -> c_uint;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_get_navigation_type(navigation: *mut WebKitNavigationAction) -> WebKitNavigationType;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_get_request(navigation: *mut WebKitNavigationAction) -> *mut WebKitURIRequest;
-    #[cfg(any(feature = "v2_20", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_20")))]
+    //#[cfg(any(feature = "v2_20", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_20")))]
     pub fn webkit_navigation_action_is_redirect(navigation: *mut WebKitNavigationAction) -> gboolean;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_action_is_user_gesture(navigation: *mut WebKitNavigationAction) -> gboolean;
 
     //=========================================================================
@@ -3648,8 +3648,8 @@ extern "C" {
     pub fn webkit_navigation_policy_decision_get_frame_name(decision: *mut WebKitNavigationPolicyDecision) -> *const c_char;
     pub fn webkit_navigation_policy_decision_get_modifiers(decision: *mut WebKitNavigationPolicyDecision) -> c_uint;
     pub fn webkit_navigation_policy_decision_get_mouse_button(decision: *mut WebKitNavigationPolicyDecision) -> c_uint;
-    #[cfg(any(feature = "v2_6", feature = "dox"))]
-    #[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
+    //#[cfg(any(feature = "v2_6", feature = "dox"))]
+    //#[cfg_attr(feature = "dox", doc(cfg(feature = "v2_6")))]
     pub fn webkit_navigation_policy_decision_get_navigation_action(decision: *mut WebKitNavigationPolicyDecision) -> *mut WebKitNavigationAction;
     pub fn webkit_navigation_policy_decision_get_navigation_type(decision: *mut WebKitNavigationPolicyDecision) -> WebKitNavigationType;
     pub fn webkit_navigation_policy_decision_get_request(decision: *mut WebKitNavigationPolicyDecision) -> *mut WebKitURIRequest;
